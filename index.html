@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Scalio - Embroidery Motif Resizer</title>
+  <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+  <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+</head>
+<body>
+  <div id="root"></div>
+  
+  <script type="text/babel">
+    const { useState, useRef } = React;
+    const { Upload, Download, ZoomIn, Eye, Ruler, Scissors } = lucide;
+
+    function EmbroideryMotifResizer() {
+      const [selectedImage, setSelectedImage] = useState(null);
+      const [imagePreview, setImagePreview] = useState(null);
+      const [currentMotifWidth, setCurrentMotifWidth] = useState('');
+      const [currentMotifHeight, setCurrentMotifHeight] = useState('');
+      const [targetMotifWidth, setTargetMotifWidth] = useState('');
+      const [targetMotifHeight, setTargetMotifHeight] = useState('');
+      const [previewImage, setPreviewImage] = useState(null);
+      const [showRuler, setShowRuler] = useState(true);
+      const [isProcessing, setIsProcessing] = useState(false);
+      const [outputFormat, setOutputFormat] = useState('a4-page');
+      
+      const fileInputRef = useRef(null);
+      const canvasRef = useRef(null);
+      const imageRef = useRef(null);
+
+      // [Rest of your component code will go here - I'll provide this in the next step]
+      
+      return (
+        <div className="min-h-screen bg-slate-50 p-4 lg:p-6">
+          {/* Component JSX will go here */}
+        </div>
+      );
+    }
+
+    ReactDOM.render(<EmbroideryMotifResizer />, document.getElementById('root'));
+  </script>
+</body>
+</html>
